@@ -7,6 +7,9 @@
     <title>ToolHub</title>
     <link rel="stylesheet" href="./framework/bootstrap.min.css">
     <!-- <script src="./framework/bootstrap.min.js"></script> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
     <script src="./framework/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -14,6 +17,8 @@
         * {
             text-decoration: none !important;
             list-style: none;
+            font-family: "K2D", sans-serif;
+            font-style: normal;
         }
 
         .container {
@@ -781,40 +786,40 @@
         </div>
     </nav>
 
-<script>
-// Check for saved theme preference, otherwise use system preference
-const getPreferredTheme = () => {
-    const savedTheme = localStorage.getItem('theme')
-    if (savedTheme) {
-        return savedTheme
-    }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-}
+    <script>
+        // Check for saved theme preference, otherwise use system preference
+        const getPreferredTheme = () => {
+            const savedTheme = localStorage.getItem('theme')
+            if (savedTheme) {
+                return savedTheme
+            }
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+        }
 
-// Apply theme
-const setTheme = (theme) => {
-    document.documentElement.setAttribute('data-bs-theme', theme)
-    localStorage.setItem('theme', theme)
-    
-    // Update icon
-    const icon = document.getElementById('themeIcon')
-    if (theme === 'dark') {
-        icon.className = 'fa-regular fa-moon'
-    } else {
-        icon.className = 'fa-regular fa-sun'
-    }
-}
+        // Apply theme
+        const setTheme = (theme) => {
+            document.documentElement.setAttribute('data-bs-theme', theme)
+            localStorage.setItem('theme', theme)
 
-// Initialize theme
-setTheme(getPreferredTheme())
+            // Update icon
+            const icon = document.getElementById('themeIcon')
+            if (theme === 'dark') {
+                icon.className = 'fa-regular fa-moon'
+            } else {
+                icon.className = 'fa-regular fa-sun'
+            }
+        }
 
-// Add click handler
-document.getElementById('themeSwitcher').addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-bs-theme')
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
-    setTheme(newTheme)
-})
-</script>
+        // Initialize theme
+        setTheme(getPreferredTheme())
+
+        // Add click handler
+        document.getElementById('themeSwitcher').addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-bs-theme')
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark'
+            setTheme(newTheme)
+        })
+    </script>
 </body>
 
 </html>
