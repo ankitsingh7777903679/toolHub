@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <header> <?php include 'navbar.php' ?> </header>
     <div class="home_area container mt-5 mb-5">
@@ -22,42 +24,190 @@
                 </form>
             </div>
         </div>
-        <div class="container container_tool">
-            <div class="toll_tools d-flex flex-wrap justify-content-center align-items-center">
-                <div class="tool_items">
-                    <a href="" class="tool_content">
-                        <div class="tool_header">
-                            <div class="tool_circle">
-                                <i class="fa-regular fa-file-lines fs-4" style="color: #f8e4e7ff;"></i>
+        <div class="container container_tool my-5">
+            <div class="toll_tools row row-cols-1 row-cols-md-3 row-cols-lg-5 gy-3 gx-4">
+                <div class="col px-lg-1">
+                    <div class="tool_items " style="background-color: #6f56ec;">
+                        <a href="" class="tool_content">
+                            <div class="tool_header d-flex justify-content-between align-items-center">
+                                <div class="tool_circle rounded-circle d-flex justify-content-center align-items-center" style="background-color: #9d8cf2;">
+                                    <i class="fa-regular fa-file-lines fs-5"></i>
+                                </div>
+                                <div class="tool_tag" style="background-color: #9d8cf2;">
+                                    <span>45 + tools</span>
+                                </div>
                             </div>
-                            <div class="tool_tag">
-                                <span>45 + tools</span>
+                            <div class="tool_body d-flex justify-content-between align-items-center my-2 gap-3">
+                                <div>
+                                    <p class="tool_name mb-0 fw-bolder">PDF Tools</p>
+                                    <span class="tool_descr">Solve Your PDF Problems</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
                             </div>
-                        </div>
-                        <div class="tool_body">
-                            <div>
-                                <p class="tool_name">PDF Tools</p>
-                                <span class="tool_descr">Solve Your PDF Problems</span>
+                            <div class="tool_footer mt-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>Featured Tool :</span>
+                                    <a href="" style="color: #6f56ec;">PDF Creator</a>
+                                </div>
                             </div>
-                            <div>
-                                <i class="fa-solid fa-arrow-right"></i>
-                            </div>
-                        </div>
-                        <div class="tool_footer">
-                            <div>
-                                <span>Featured Tool :</span>
-                                <a href="">PDF Creator</a>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+
+                    </div>
                 </div>
-                <div class="tool_items"></div>
-                <div class="tool_items"></div>
-                <div class="tool_items"></div>
-                <div class="tool_items"></div>
+                <div class="col px-lg-1">
+                    <div class="tool_items col" style="background-color: #F66213;">
+                        <a href="" class="tool_content">
+                            <div class="tool_header d-flex justify-content-between align-items-center">
+                                <div class="tool_circle rounded-circle d-flex justify-content-center align-items-center" style="background-color: #F8935F;">
+                                    <i class="fa-regular fa-file-lines fs-5"></i>
+                                </div>
+                                <div class="tool_tag" style="background-color: #F8935F;">
+                                    <span>45 + tools</span>
+                                </div>
+                            </div>
+                            <div class="tool_body d-flex justify-content-between align-items-center my-2 gap-3">
+                                <div>
+                                    <p class="tool_name mb-0 fw-bolder">Image Tools</p>
+                                    <span class="tool_descr">Solve Your Image Problems</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="tool_footer mt-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>Featured Tool :</span>
+                                    <a href="" style="color: #F66213;">Remove BG</a>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col px-lg-1">
+                    <div class="tool_items col" style="background-color: #D61C4E;">
+                        <a href="" class="tool_content">
+                            <div class="tool_header d-flex justify-content-between align-items-center">
+                                <div class="tool_circle rounded-circle d-flex justify-content-center align-items-center" style="background-color: #E36587;">
+                                    <i class="fa-regular fa-file-lines fs-5"></i>
+                                </div>
+                                <div class="tool_tag" style="background-color: #E36587;">
+                                    <span>45 + tools</span>
+                                </div>
+                            </div>
+                            <div class="tool_body d-flex justify-content-between align-items-center my-2 gap-3">
+                                <div>
+                                    <p class="tool_name mb-0 fw-bolder">Video Tools</p>
+                                    <span class="tool_descr">Solve Your Video Problems</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="tool_footer mt-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>Featured Tool :</span>
+                                    <a href="" style="color: #D61C4E;">Mute Video</a>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col px-lg-1">
+                    <div class="tool_items col" style="background-color: #1C67CA;">
+                        <a href="" class="tool_content">
+                            <div class="tool_header d-flex justify-content-between align-items-center">
+                                <div class="tool_circle rounded-circle d-flex justify-content-center align-items-center" style="background-color: #6598DB;">
+                                    <i class="fa-regular fa-file-lines fs-5"></i>
+                                </div>
+                                <div class="tool_tag" style="background-color: #6598DB;">
+                                    <span>45 + tools</span>
+                                </div>
+                            </div>
+                            <div class="tool_body d-flex justify-content-between align-items-center my-2 gap-3">
+                                <div>
+                                    <p class="tool_name mb-0 fw-bolder">AI Write</p>
+                                    <span class="tool_descr">Solve Your Text Problems</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="tool_footer mt-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>Featured Tool :</span>
+                                    <a href="" style="color: #1C67CA;">Paragraph Writer</a>
+                                </div>
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col px-lg-1">
+                    <div class="tool_items col" style="background-color: #247881;">
+                        <a href="" class="tool_content">
+                            <div class="tool_header d-flex justify-content-between align-items-center">
+                                <div class="tool_circle rounded-circle d-flex justify-content-center align-items-center" style="background-color: #6AA3AA;">
+                                    <i class="fa-regular fa-file-lines fs-5"></i>
+                                </div>
+                                <div class="tool_tag" style="background-color: #6AA3AA;">
+                                    <span>45 + tools</span>
+                                </div>
+                            </div>
+                            <div class="tool_body d-flex justify-content-between align-items-center my-2 gap-3">
+                                <div>
+                                    <p class="tool_name mb-0 fw-bolder">File Tools</p>
+                                    <span class="tool_descr">Solve Your File Problems</span>
+                                </div>
+                                <div>
+                                    <i class="fa-solid fa-arrow-right"></i>
+                                </div>
+                            </div>
+                            <div class="tool_footer mt-2">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>Featured Tool :</span>
+                                    <a href="" style="color: #247881;">Split Excel</a>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="container"></div>
+        <!-- <div class="static_con container d-flex justify-content-around align-items-center gap-3 my-5">
+            <div class="static_item">
+                <div class="static_num">1m</div>
+                <div class="static_text">
+                    <span>Active</span>
+                    <span>User</span>
+                </div>
+            </div>
+            <div class="static_item">
+                <div class="static_num">10m</div>
+                <div class="static_text">
+                    <span>Files</span>
+                    <span>Converted</span>
+                </div>
+            </div>
+            <div class="static_item ">
+                <div class="static_num">200+</div>
+                <div class="static_text">
+                    <span>Online</span>
+                    <span>Tools</span>
+                </div>
+            </div>
+            <div class="static_item ">
+                <div class="static_num">500k</div>
+                <div class="static_text">
+                    <span>PDFs</span>
+                    <span>Created</span>
+                </div>
+            </div>
+        </div> -->
     </div>
 </body>
+
 </html>
