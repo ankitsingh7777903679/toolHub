@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="container container_tool my-5">
-            <div class="toll_tools row row-cols-1 row-cols-md-3 row-cols-lg-5 gy-3 gx-4">
+            <div class="toll_tools d-flex overflow-x-auto gap-lg-0 gap-2">
                 <div class="col px-lg-1">
                     <div class="tool_items " style="background-color: #6f56ec;">
                         <a href="" class="tool_content">
@@ -177,7 +177,7 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="static_con container d-flex justify-content-around align-items-center gap-3 my-5">
+        <div class="static_con col-md-8 col-lg-12 container d-flex justify-content-around align-items-center gap-2 gap-lg-3 my-5">
             <div class="static_item">
                 <div class="static_num">1m</div>
                 <div class="static_text">
@@ -206,7 +206,7 @@
                     <span>Created</span>
                 </div>
             </div>
-        </div> -->
+        </div>
     </div>
 </body>
 

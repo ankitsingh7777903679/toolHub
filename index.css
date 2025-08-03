@@ -38,11 +38,16 @@
   box-shadow: 0 0 0 0.2rem #ffffff40 !important;
 }
 
+.toll_tools::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+}
 .tool_items {
   padding: 20px;
   border-radius: 15px;
+  width: 220px;
+  padding: auto 15px;
 }
-
 .tool_items a {
   color: #ffffff;
   text-decoration: none !important;
@@ -57,7 +62,7 @@
   font-size: 14px;
 }
 .tool_body span {
-  font-size: 13px !important;
+  font-size: 12px !important;
 }
 
 .tool_footer {
@@ -103,4 +108,16 @@
     font-size: 14px;
     line-height: 140%;
   }
+
+  .static_item {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .static_num {
+    font-size: 30px;
+  }
+}
+@media (max-width: 426px) {
+  
 }
