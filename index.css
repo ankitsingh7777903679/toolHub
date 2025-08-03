@@ -94,11 +94,54 @@
 }
 .static_num {
   font-size: 50px;
-  font-weight: 500;
+  font-weight: 650;
+  color: #1A8FE3;
 }
 .static_text {
   display: flex;
   flex-direction: column;
+}
+.tool_area{
+  background-color: #EFF7FD;
+}
+.tool_area_title{
+  font-weight: 600;
+  font-size: 50px;
+  line-height: 140%;
+  color: #181d20;
+  
+}
+.tool_area_item{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.tool_area_items{
+  background-color: white;
+  border-radius: 30px;
+  font-size: 14px;
+  padding: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 5px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.tool_area_items::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, newer versions of Opera */
+}
+.active_tab{
+    border-radius: 25px;
+    background-color: #1a8fe3;
+    padding: 10px 10px;
+    font-size: 14px;
+    color: #ffffff;
 }
 
 @media (max-width: 992px) {
@@ -120,6 +163,11 @@
   .static_num {
     font-size: 30px;
   }
+  .tool_area_title{
+  font-size: 35px;
+    line-height: 140%;
+  
+}
 }
 @media (max-width: 426px) {
   

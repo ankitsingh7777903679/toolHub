@@ -11,9 +11,9 @@
 </head>
 
 <body>
-    <header> <?php include 'navbar.php' ?> </header>
+    <header> <?php include 'navbar.php' ?></header>
     <div class="home_area">
-        <div class="container mt-5 mb-5">
+        <div class="container mt-3 mb-5">
             <div class="containr">
                 <div class="container home_content align-items-center d-flex flex-column">
                     <h1 class="text-md-center">Free Tools to Make <span>Everything</span> Simple</h1>
@@ -211,7 +211,45 @@
         </div>
     </div>
 
-    
+    <div class="tool_area py-5">
+        <div class="container">
+            <div>
+                <div>
+                    <h2 class="tool_area_title text-center">Our Most Popular Tools</h2>
+                </div>
+                <div>
+                    <p class="tool_area_descr text-center">We present the best of the best. All free, no catch</p>
+                </div>
+                <div class="d-flex align-items-center justify-content-center">
+                    <div class="tool_area_items d-flex gap-1 overflow-x-auto">
+                        <div class="tool_area_item active_tab">
+                            <span class="material-symbols-outlined"> view_cozy</span>
+                            <span class="d-flex " >All Tools</span>
+                        </div>
+                        <div class="tool_area_item">
+                            <i class="fa-solid fa-file-pdf"></i> <span>Pdf Tools</span>
+                        </div>
+                        <div class="tool_area_item ">
+                            <i class="fa-solid fa-video"></i>
+                            <span>Video Tools</span>
+                        </div>
+                        <div class="tool_area_item ">
+                            <i class="fa-solid fa-image"></i> <span>Image Tools</span>
+                        </div>
+                        <div class="tool_area_item ">
+                            <span class="material-symbols-outlined"> view_cozy</span>
+                            <span>Converter Tools</span>
+                        </div>
+                        <div class="tool_area_item ">
+                            <i class="fa-solid fa-pen"></i> <span>AI Write</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div></div>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=view_cozy" />
+    
+    
     <script src="./framework/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
@@ -162,6 +165,17 @@
             border-radius: 25px;
         }
 
+        .mode {
+            background: none;
+        }
+
+        .mode:hover,
+        .mode:focus {
+            border: none !important;
+            background: none !important;
+
+        }
+
         .search-input:hover,
         .search-input:focus {
             border-color: none;
@@ -204,15 +218,32 @@
                 padding: 8px 10px;
                 border: 1px solid #ccc;
                 border-radius: 25px;
-
             }
+
+            .modal-content {
+                width: 85%;
+            }
+        }
+
+        body {
+            padding-top: 76px;
+            /* Add padding to prevent content from hiding behind navbar */
+        }
+
+        .navbar {
+            background-color: var(--bs-body-bg);
+            z-index: 1030;
+        }
+
+        .dropdown-menu {
+            margin-top: 0.5rem;
         }
     </style>
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-lg fixed-top">
         <div class="container px-2 px-lg-3">
             <a class="navbar-brand" href="#">ToolHub</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -646,7 +677,7 @@
                 <div class="d-flex align-items-center gap-1 justify-content-center mb-3 mb-lg-0">
                     <!-- <img src="./svg/moon.svg" alt="img" width="30px" height="30px" class="me-1 navbar-icon"> -->
                     <!-- Replace the moon.svg img with this button -->
-                    <button class="btn theme-toggle me-1" id="themeSwitcher" aria-label="Toggle theme">
+                    <button class="mode border-0 theme-toggle me-1" id="themeSwitcher" aria-label="Toggle theme">
                         <i class="fa-regular fa-sun fs-1" id="themeIcon"></i>
                     </button>
                     <img src="./svg/share.svg" data-bs-target="#share" data-bs-toggle="modal" alt="share" width="30px" height="30px" class="me-2 navbar-icon">
@@ -663,7 +694,7 @@
                 <!-- Sign In Modal -->
                 <div class="modal fade" id="signInModal" aria-labelledby="signInModalLabel" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered justify-content-center">
-                        <div class="modal-content w-75">
+                        <div class="modal-content">
                             <div class="modal-header border-0">
                                 <h1 class="modal-title fs-5 w-100 text-center" id="signInModalLabel">Sign In to ToolHub</h1>
                             </div>
@@ -704,7 +735,7 @@
                 <!-- Sign Up Modal -->
                 <div class="modal fade" id="signUpModal" aria-labelledby="signUpModalLabel" tabindex="-1" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered justify-content-center">
-                        <div class="modal-content w-75">
+                        <div class="modal-content">
                             <div class="modal-header border-0">
                                 <h1 class="modal-title fs-5 w-100 text-center" id="signUpModalLabel">Create Account</h1>
                             </div>
