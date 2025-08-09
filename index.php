@@ -5,13 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <header> <?php include 'navbar.php' ?></header>
+    <header> <?php include 'navbar.php'?></header>
+
     <div class="home_area">
         <div class="container mt-3 mb-5">
             <div class="containr">
@@ -213,43 +214,59 @@
 
     <div class="tool_area py-5">
         <div class="container">
-            <div>
+            <div class="">
                 <div>
                     <h2 class="tool_area_title text-center">Our Most Popular Tools</h2>
                 </div>
                 <div>
                     <p class="tool_area_descr text-center">We present the best of the best. All free, no catch</p>
                 </div>
-                <div class="d-flex align-items-center justify-content-center">
-                    <div class="tool_area_items d-flex gap-1 overflow-x-auto">
-                        <div class="tool_area_item active_tab">
+                <div class="d-flex align-items-center justify-content-center mb-2">
+                    <div class="tool_area_items d-flex gap-3 overflow-x-auto" id="nav-tab" role="tablist">
+                        <div class="tool_area_item nav-link active" id="all-tool-tab" data-bs-toggle="tab" data-bs-target="#all_tool" type="button">
                             <span class="material-symbols-outlined"> view_cozy</span>
-                            <span class="d-flex " >All Tools</span>
+                            <span class="d-flex ">All Tools</span>
                         </div>
-                        <div class="tool_area_item">
+                        <div class="tool_area_item nav-link" id="pdf-tool-tab" data-bs-toggle="tab" data-bs-target="#pdf_tool" type="button">
                             <i class="fa-solid fa-file-pdf"></i> <span>Pdf Tools</span>
                         </div>
-                        <div class="tool_area_item ">
+                        <div class="tool_area_item nav-link" id="video-tool-tab" data-bs-toggle="tab" data-bs-target="#video_tool" type="button">
                             <i class="fa-solid fa-video"></i>
                             <span>Video Tools</span>
                         </div>
-                        <div class="tool_area_item ">
+                        <div class="tool_area_item nav-link" id="image-tool-tab" data-bs-toggle="tab" data-bs-target="#image_tool" type="button">
                             <i class="fa-solid fa-image"></i> <span>Image Tools</span>
                         </div>
-                        <div class="tool_area_item ">
+                        <div class="tool_area_item nav-link" id="convert-tool-tab" data-bs-toggle="tab" data-bs-target="#convert_tool" type="button">
                             <span class="material-symbols-outlined"> view_cozy</span>
                             <span>Converter Tools</span>
                         </div>
-                        <div class="tool_area_item ">
+                        <div class="tool_area_item nav-link" id="ai-tool-tab" data-bs-toggle="tab" data-bs-target="#ai_tool" type="button">
                             <i class="fa-solid fa-pen"></i> <span>AI Write</span>
                         </div>
-
                     </div>
                 </div>
+                <!--  -->
+                <div class="tool_blox_result d-flex justify-content-center">
+                    <div class="tab-content border border-1 border-black mt-2 col-lg-9 col-10" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="all_tool" role="tabpanel" aria-labelledby="all-tool-tab" tabindex="0">1...</div>
+                        <div class="tab-pane fade" id="pdf_tool" role="tabpanel" aria-labelledby="pdf-tool-tab" tabindex="0">2...</div>
+                        <div class="tab-pane fade" id="video_tool" role="tabpanel" aria-labelledby="video-tool-tab" tabindex="0">3...</div>
+                        <div class="tab-pane fade" id="image_tool" role="tabpanel" aria-labelledby="image-tool-tab" tabindex="0">4...</div>
+                        <div class="tab-pane fade" id="convert_tool" role="tabpanel" aria-labelledby="convert-tool-tab" tabindex="0">5...</div>
+                        <div class="tab-pane fade" id="ai_tool" role="tabpanel" aria-labelledby="ai-tool-tab" tabindex="0">6...</div>
+                    </div>
+                </div>
+
+                <!--  -->
             </div>
-            <div></div>
         </div>
     </div>
+    <!-- footer -->
+<footer> <?php include 'footer.php'?></footer>
+        <!-- footer -->
+
+
 </body>
 
 </html>

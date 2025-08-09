@@ -1,5 +1,5 @@
-.home_area{
-  background-color: #FBFDFE;
+.home_area {
+  background-color: #fbfdfe;
 }
 .home_content h1 {
   font-weight: bold;
@@ -95,53 +95,93 @@
 .static_num {
   font-size: 50px;
   font-weight: 650;
-  color: #1A8FE3;
+  color: #1a8fe3;
 }
 .static_text {
   display: flex;
   flex-direction: column;
 }
-.tool_area{
-  background-color: #EFF7FD;
+
+.tool_area {
+  background-color: #eff7fd;
 }
-.tool_area_title{
+.tool_area_title {
   font-weight: 600;
   font-size: 50px;
   line-height: 140%;
   color: #181d20;
-  
 }
-.tool_area_item{
-  display: flex;
+.tool_area_item {
+  display: flex ;
   align-items: center;
   gap: 8px;
   padding: 8px 16px;
   white-space: nowrap;
   cursor: pointer;
   transition: all 0.3s ease;
+  border-radius: 30px !important;
+  font-size: 14px !important;
+  padding: 5px !important;
 }
-.tool_area_items{
+.tool_area_items {
   background-color: white;
-  border-radius: 30px;
-  font-size: 14px;
-  padding: 5px;
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 5px;
-  overflow-x: auto;
+  border-radius: 30px !important;
+  font-size: 14px !important;
+  padding: 5px !important;
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  /* gap: 5px; */
+  overflow-x: auto !important;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
+ 
+  
 }
 
 .tool_area_items::-webkit-scrollbar {
   display: none; /* Chrome, Safari, newer versions of Opera */
 }
-.active_tab{
-    border-radius: 25px;
-    background-color: #1a8fe3;
-    padding: 10px 10px;
-    font-size: 14px;
-    color: #ffffff;
+.active_tab {
+  border-radius: 25px !important;
+  background-color: #1a8fe3 !important;
+  padding: 10px 10px !important;
+  font-size: 14px !important;
+  color: #ffffff !important;
+}
+.nav-link.active {
+  border-radius: 25px !important;
+  background-color: #1a8fe3 !important;
+  padding: 10px 10px !important;
+  font-size: 14px !important;
+  color: #ffffff !important;
+}
+
+/* footer */
+.footer_title{
+  font-size: 25px;
+}
+.footer_descr{
+  font-size: 15px !important;
+}
+
+.footer ul{
+  padding: 0; 
+}
+.footer ul li{
+  padding: 3px; 
+}
+.footer ul li a{
+  color: #636363;
+  font-size: 14px;
+  
+}
+.footer ul li a:hover{
+  color: #1a8fe3;
+  font-size: 14px;
+  
+}
+.copy_right p{
+  font-size: 12px;
 }
 
 @media (max-width: 992px) {
@@ -163,12 +203,10 @@
   .static_num {
     font-size: 30px;
   }
-  .tool_area_title{
-  font-size: 35px;
+  .tool_area_title {
+    font-size: 35px;
     line-height: 140%;
-  
-}
+  }
 }
 @media (max-width: 426px) {
-  
 }
