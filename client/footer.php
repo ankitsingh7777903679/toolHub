@@ -67,7 +67,7 @@
                 <p class="footer_title mb-1">ToolHub</p>
             </div>
             <div class="copy_right">
-                <p>@ 2025 TinyWow. All rights reserved</p>
+                <p>@ 2025 toolhub. All rights reserved</p>
             </div>
         </div>
     </div>

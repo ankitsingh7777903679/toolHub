@@ -1,16 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="pdf.css">
-</head>
-
-<body>
-    <header> <?php include 'navbar.php' ?></header>
-    <div>
+  <div>
         <div class="container pdf_tool_head d-flex flex-column justify-content-center align-items-center">
             <h1 class="mb-4">Pdf Tools</h1>
             <p>Free Online PDF Tools</p>
@@ -23,6 +11,3 @@
             </form>
         </div>
     </div>
-</body>
-
-</html>
