@@ -11,8 +11,9 @@
     include ('./client/bootstrap.php') 
     
     ?>
-    <link rel="stylesheet" href="./public/index.css">
-    <link rel="stylesheet" href="./public/navbar.css">
+    
+    
+    
 </head>
 
 <body>

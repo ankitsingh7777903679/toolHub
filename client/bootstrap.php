@@ -6,3 +6,6 @@
 
     <script src="./framework/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="./framework/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/pdf.css">
+    <link rel="stylesheet" href="./public/navbar.css">
+    <link rel="stylesheet" href="./public/index.css">
