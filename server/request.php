@@ -31,6 +31,7 @@ if (isset($_POST['signup'])) {
     print_r($_POST);
     $query = " select * from users where email = '$email' and password = '$password' ";
     $result = $conn->query($query);
+
     // echo $result->num_rows;
     if ($result->num_rows == 1) {
         foreach ($result as $row) {
@@ -50,6 +51,6 @@ if (isset($_POST['signup'])) {
     }
 } else if (isset($_GET['logout'])) {
     session_unset();
-    header("location: /projo");
+    header("location: /toolHub");
 }
 ?>

@@ -437,100 +437,6 @@
                 </button>
                 <img src="./svg/share.svg" data-bs-target="#share" data-bs-toggle="modal" alt="share" width="30px" height="30px" class="me-2 navbar-icon">
             </div>
-            <form class="d-flex search-nav mb-2 mb-lg-0" role="search">
-                <button class="search-btn btn pe-0" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #8B8D8F;"></i></button>
-                <input class="search-input form-control form-control-sm border border-0" type="search" placeholder="Search" aria-label="Search" style="background: none; color: #8B8D8F; ">
-            </form>
-
-
-            <button class="btn btn-primary ms-1" data-bs-toggle="modal" data-bs-target="#signInModal" type="button">Sign In</button>
-
-
-            <!-- Sign In Modal -->
-            <div class="modal" id="signInModal" aria-labelledby="signInModalLabel" tabindex="" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered justify-content-center">
-                    <div class="modal-content">
-                        <div class="modal-header border-0">
-                            <h1 class="modal-title fs-5 w-100 text-center" id="signInModalLabel">Login to ToolHub</h1>
-                        </div>
-                        <div class="modal-body">
-                            <button type="button d-flex align-items-center gap-2" class="btn btn-outline-secondary w-100">
-                                <img src="./svg/google-color-svgrepo-com.svg" alt="google" width="24" height="24">
-
-                                <span>Login with Google</span>
-                            </button>
-                            <form method="post" action="./server/request.php" class="needs-validation" novalidate>
-                                <div class="mb-3">
-                                    <label for="signInEmail" class="form-label">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="signInEmail" placeholder="name@example.com" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="signInPassword" class="form-label">Password</label>
-                                    <input type="password" name="password" class="form-control" id="signInPassword" required>
-                                </div>
-                                <div class="mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input" id="rememberMe">
-                                    <label class="form-check-label" for="rememberMe">Remember me</label>
-                                </div>
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" name="login" type="submit">Sign In</button>
-
-                                </div>
-                            </form>
-                            <div class="text-center mt-3">
-                                <p class="mb-0">Don't have an account?
-                                    <a href="#" data-bs-target="#signUpModal" data-bs-toggle="modal">Sign Up</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sign Up Modal -->
-            <div class="modal" id="signUpModal" aria-labelledby="signUpModalLabel" tabindex="" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered justify-content-center">
-                    <div class="modal-content">
-                        <div class="modal-header border-0">
-                            <h1 class="modal-title fs-5 w-100 text-center" id="signUpModalLabel">Create Account</h1>
-                        </div>
-                        <div class="modal-body">
-                            <button type="button d-flex align-items-center gap-2" class="btn btn-outline-secondary w-100">
-                                <img src="./svg/google-color-svgrepo-com.svg" alt="google" width="24" height="24">
-                                <span>Sign Up with Google</span>
-                            </button>
-                            <form method="post" action="./server/request.php" class="needs-validation" novalidate>
-                                <div class="mb-3">
-                                    <label for="username" class="form-label">user name</label>
-                                    <input type="text" name="username" class="form-control" id="username" placeholder="enter username" require>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="signUpEmail" class="form-label">Email address</label>
-                                    <input type="email" name="email" class="form-control" id="signUpEmail" placeholder="name@example.com" required>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="signUpPassword" class="form-label">Create Password</label>
-                                    <input type="password" name="password" class="form-control" id="signUpPassword" required>
-                                </div>
-                                <div class="mb-3 form-check">
-                                    <input type="checkbox" class="form-check-input" id="agreeTerms" required>
-                                    <label class="form-check-label" for="agreeTerms">I agree to the Terms and Privacy Policy</label>
-                                </div>
-                                <div class="d-grid gap-2">
-                                    <button class="btn btn-primary" name="signup" type="submit">Create Account</button>
-
-                                </div>
-                            </form>
-                            <div class="text-center mt-3">
-                                <p class="mb-0">Already have an account?
-                                    <a href="#" data-bs-target="#signInModal" data-bs-toggle="modal">Sign In</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <!-- share with  -->
             <div class="modal fade" id="share" aria-labelledby="exampleModalToggleLabel" tabindex="-1" style="display: none;" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered d-flex justify-content-center">
@@ -572,6 +478,130 @@
                     </div>
                 </div>
             </div>
+            <form class="d-flex search-nav mb-2 mb-lg-0" role="search">
+                <button class="search-btn btn pe-0" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #8B8D8F;"></i></button>
+                <input class="search-input form-control form-control-sm border border-0" type="search" placeholder="Search" aria-label="Search" style="background: none; color: #8B8D8F; ">
+            </form>
+
+            <?php
+
+            if (isset($_SESSION['user']) && is_array($_SESSION['user']) && isset($_SESSION['user']['username'])) { ?>
+
+                <div class="dropdown user-panel ms-3">
+                    <button class="btn btn-secondary user-avtar rounded-circle fs-6 fw-bolder" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <?php echo ucfirst($_SESSION['user']['username'][0]);
+                        // echo ucfirst($_SESSION['user']['email']);
+                        ?>
+                    </button>
+                    <ul class="dropdown-menu end-0">
+                        <li>
+                            <a class="dropdown-item d-flex align-items-center justify-content-center gap-2 px-0">
+                                <button class="btn btn-secondary user-avtar-inner rounded-circle fs-6 fw-bolder">
+                                    <i class="fa-regular fa-user"></i>
+                                </button>
+                                <p class="mb-0 user-avtar-email">
+                                    <?php echo substr($_SESSION['user']['email'], 0, 18) . '...'; ?>
+                                </p>
+                            </a>
+                        </li>
+                        <li><a class="dropdown-item border border-danger rounded mt-1 py-0 text-center text-danger" href="./server/request.php?logout=true">logout</a></li>
+
+                    </ul>
+                </div>
+
+
+            <?php } else { ?>
+
+                <button class="btn btn-primary ms-1" data-bs-toggle="modal" data-bs-target="#signInModal" type="button">Sign In</button>
+                <!-- Sign In Modal -->
+                <div class="modal" id="signInModal" aria-labelledby="signInModalLabel" tabindex="" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered justify-content-center">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h1 class="modal-title fs-5 w-100 text-center" id="signInModalLabel">Login to ToolHub</h1>
+                            </div>
+                            <div class="modal-body">
+                                <button type="button d-flex align-items-center gap-2" class="btn btn-outline-secondary w-100">
+                                    <img src="./svg/google-color-svgrepo-com.svg" alt="google" width="24" height="24">
+
+                                    <span>Login with Google</span>
+                                </button>
+                                <form method="post" action="./server/request.php" class="needs-validation" novalidate>
+                                    <div class="mb-3">
+                                        <label for="signInEmail" class="form-label">Email address</label>
+                                        <input type="email" name="email" class="form-control" id="signInEmail" placeholder="name@example.com" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="signInPassword" class="form-label">Password</label>
+                                        <input type="password" name="password" class="form-control" id="signInPassword" required>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="rememberMe">
+                                        <label class="form-check-label" for="rememberMe">Remember me</label>
+                                    </div>
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-primary" name="login" type="submit">Sign In</button>
+
+                                    </div>
+                                </form>
+                                <div class="text-center mt-3">
+                                    <p class="mb-0">Don't have an account?
+                                        <a href="#" data-bs-target="#signUpModal" data-bs-toggle="modal">Sign Up</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Sign Up Modal -->
+                <div class="modal" id="signUpModal" aria-labelledby="signUpModalLabel" tabindex="" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered justify-content-center">
+                        <div class="modal-content">
+                            <div class="modal-header border-0">
+                                <h1 class="modal-title fs-5 w-100 text-center" id="signUpModalLabel">Create Account</h1>
+                            </div>
+                            <div class="modal-body">
+                                <button type="button d-flex align-items-center gap-2" class="btn btn-outline-secondary w-100">
+                                    <img src="./svg/google-color-svgrepo-com.svg" alt="google" width="24" height="24">
+                                    <span>Sign Up with Google</span>
+                                </button>
+                                <form method="post" action="./server/request.php" class="needs-validation" novalidate>
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">user name</label>
+                                        <input type="text" name="username" class="form-control" id="username" placeholder="enter username" require>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="signUpEmail" class="form-label">Email address</label>
+                                        <input type="email" name="email" class="form-control" id="signUpEmail" placeholder="name@example.com" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="signUpPassword" class="form-label">Create Password</label>
+                                        <input type="password" name="password" class="form-control" id="signUpPassword" required>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="agreeTerms" required>
+                                        <label class="form-check-label" for="agreeTerms">I agree to the Terms and Privacy Policy</label>
+                                    </div>
+                                    <div class="d-grid gap-2">
+                                        <button class="btn btn-primary" name="signup" type="submit">Create Account</button>
+
+                                    </div>
+                                </form>
+                                <div class="text-center mt-3">
+                                    <p class="mb-0">Already have an account?
+                                        <a href="#" data-bs-target="#signInModal" data-bs-toggle="modal">Sign In</a>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            <?php } ?>
+
+
+
+
         </div>
     </div>
 </nav>

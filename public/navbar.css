@@ -180,6 +180,14 @@
             width: 75%;
         }
 
+        /* user panel */
+        .user-avtar-inner i{
+            padding: 5px 0px;
+        }
+        .user-avtar-email{
+            font-size: 12px !important;
+        }
+
         @media (max-width: 992px) {
             .pdf-dropdown {
                 gap: 30px;
