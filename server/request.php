@@ -17,7 +17,7 @@ if (isset($_POST['signup'])) {
     echo $user->insert_id;
     if ($result) {
         echo "new user registred";
-        $_SESSION["user"] = ["username" => $username, "email" => $email, "user_id" => $user->insert_id];
+        $_SESSION["user"] = ["username" => $username, "email" => $email,"password" => $password , "user_id" => $user->insert_id];
         header("location: /toolHub");
     } else {
         echo "error";
@@ -43,7 +43,7 @@ if (isset($_POST['signup'])) {
             echo $user_id;
 
         }
-       $_SESSION["user"] = ["username" => $username, "email" => $email, "user_id" => $user_id];
+       $_SESSION["user"] = ["username" => $username, "email" => $email,"password" => $password , "user_id" => $user_id];
       
         header("location: /toolHub");
     } else {
