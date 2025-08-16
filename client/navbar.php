@@ -485,34 +485,40 @@
 
             <?php
             // 1. Check for Admin user first
-            if (
-                isset($_SESSION['user']['email']) && $_SESSION['user']['email'] == "ankitsingh77779036@gmail.com" && isset($_SESSION['user']['password']) && $_SESSION['user']['password'] == "ankit@1234") { ?>
-                <p class="my-auto">admin</p>
+            if (isset($_SESSION['user']['email']) && $_SESSION['user']['email'] == "ankitsingh77779036@gmail.com" && isset($_SESSION['user']['password']) && $_SESSION['user']['password'] == "ankit@1234") { ?>
+               
                 <div class="dropdown user-panel ms-3">
-                    <button class="btn btn-secondary user-avtar rounded-circle fs-6 fw-bolder" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <a href="?admin=true" class="btn btn-secondary user-avtar rounded-circle fs-6 fw-bolder">
                         <?php echo ucfirst($_SESSION['user']['username'][0]);
                         // echo ucfirst($_SESSION['user']['email']);
                         // print_r($_SESSION);
                         ?>
-                    </button>
-                    <ul class="dropdown-menu end-0">
-                        <p class="my-auto">admin</p>
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center justify-content-center gap-2 px-0">
+                    </a>
+                    <ul class="dropdown-menu end-0 d-block">
+    
+                        <li class="border-bottom my-2 pb-1">
+                            <a class="dropdown-item d-flex align-items-center justify-content-center gap-3 px-0">
                                 <button class="btn btn-secondary user-avtar-inner rounded-circle fs-6 fw-bolder">
                                     <i class="fa-regular fa-user"></i>
                                 </button>
-                                <p class="mb-0 user-avtar-email">
+                                <div>
+                                    <p class="mb-0"><?php echo ucfirst($_SESSION['user']['username']);?></p>
+                                    <p class="mb-0 user-avtar-email">
                                     <?php echo substr($_SESSION['user']['email'], 0, 18) . '...'; ?>
                                 </p>
+                                </div>
+                                
                             </a>
                         </li>
-                        <li><a class="dropdown-item border border-danger rounded mt-1 py-0 text-center text-danger" href="./server/request.php?logout=true">logout</a></li>
+                        <li><a class="dropdown-item px-1 mt-1 py-0 text-start text-danger" href="./server/request.php?logout=true">
+                            <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Log out</a>
+                        </li>
 
                     </ul>
                 </div>
                 
             <?php // 2. Then, check for a regular logged-in user
+
             } else if (isset($_SESSION['user']) && is_array($_SESSION['user']) && isset($_SESSION['user']['username'])) { ?>
                 <div class="dropdown user-panel ms-3">
                     <button class="btn btn-secondary user-avtar rounded-circle fs-6 fw-bolder" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -521,22 +527,30 @@
                         // print_r($_SESSION);
                         ?>
                     </button>
-                    <ul class="dropdown-menu end-0">
-                        <li>
-                            <a class="dropdown-item d-flex align-items-center justify-content-center gap-2 px-0">
+                    <ul class="dropdown-menu end-0 d-block">
+    
+                        <li class="border-bottom my-2 pb-1">
+                            <a class="dropdown-item d-flex align-items-center justify-content-center gap-3 px-0">
                                 <button class="btn btn-secondary user-avtar-inner rounded-circle fs-6 fw-bolder">
                                     <i class="fa-regular fa-user"></i>
                                 </button>
-                                <p class="mb-0 user-avtar-email">
+                                <div>
+                                    <p class="mb-0"><?php echo ucfirst($_SESSION['user']['username']);?></p>
+                                    <p class="mb-0 user-avtar-email">
                                     <?php echo substr($_SESSION['user']['email'], 0, 18) . '...'; ?>
                                 </p>
+                                </div>
+                                
                             </a>
                         </li>
-                        <li><a class="dropdown-item border border-danger rounded mt-1 py-0 text-center text-danger" href="./server/request.php?logout=true">logout</a></li>
+                        <li><a class="dropdown-item px-1 mt-1 py-0 text-start text-danger" href="./server/request.php?logout=true">
+                            <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Log out</a>
+                        </li>
 
                     </ul>
                 </div>
             <?php // 3. Finally, show the sign-in button for guests
+            
             } else { ?>
 
                 <button class="btn btn-primary ms-1" data-bs-toggle="modal" data-bs-target="#signInModal" type="button">Sign In</button>
