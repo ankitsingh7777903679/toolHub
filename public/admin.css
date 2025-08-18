@@ -1,0 +1,33 @@
+.admin {
+}
+.admin .nav-link {
+  font-weight: normal !important;
+  color: #4b5563 !important;
+}
+.admin .active {
+  border-radius: 25px !important;
+  background-color: #e2f0fe !important;
+  padding: 10px 10px !important;
+  font-size: 14px !important;
+  color: #3d99f5 !important;
+}
+.admin .addtools {
+  background-color: #ffffff;
+  padding: 10px 10px 10px 0px;
+  border-radius: 15px;
+}
+.admin .preview-tool {
+    background-color: #F3F4F6;
+    border-radius: 0px 12px 12px 0px;
+}
+.admin .admin_menu_show{
+    background-color: #F3F4F6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 18px;
+}
+.admin .deshboard .icon{
+    color:  #3d99f5;
+    background-color: #e2f0fe;
+}
