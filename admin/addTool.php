@@ -11,7 +11,7 @@
 
             <div class="mb-3 col-6 ">
                 <label for="icon_class_name" class="form-label">Tool Icon Class</label>
-                <input type="text" name="icon_class_name" class="form-control" value="fa-regular fa-file-lines" id="icon_class_name" placeholder="Icon class: ex(fa-solid fa-user)">
+                <input type="text" name="icon_class_name" class="form-control" id="icon_class_name" placeholder="fa-solid fa-user">
             </div>
 
             <div class="mb-3 col-6 ">
@@ -86,7 +86,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         // Input elements from the form
         const toolNameInput = document.getElementById('tool_name');
-        const toolClassNameInput = document.getElementById('tool_class_name');
+        const toolClassNameInput = document.getElementById('icon_class_name');
         const iconColorInput = document.getElementById('icon_color');
         const iconBgColorInput = document.getElementById('iconbg_color');
         const descriptionInput = document.getElementById('tool_description');
