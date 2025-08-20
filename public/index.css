@@ -188,6 +188,7 @@
   font-size: 12px;
 }
 
+
 @media (max-width: 992px) {
   .home_content h1 {
     font-size: 35px;
@@ -211,6 +212,15 @@
     font-size: 35px;
     line-height: 140%;
   }
+  
+  
 }
 @media (max-width: 426px) {
+  .tool_area .tool_item{
+    width: 45vw;
+  }
+  .tool_item .tool_name{
+    font-size: 14px;
+  }
+
 }
