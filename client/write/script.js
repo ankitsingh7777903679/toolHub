@@ -10,7 +10,7 @@ function generateResponse() {
         return;
     }
  var paragraphs = parseInt(pera.value) || 3;
-    fetch("response.php", {
+    fetch("/toolHub/client/write/response.php", {
         method: "POST",
         body: JSON.stringify({ 
             text: text.value, 
