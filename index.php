@@ -30,8 +30,10 @@ session_start();
             include('./client/pdf.php');
         } elseif (isset($_GET['home'])) {
             include('./client/home.php');
+        } elseif (isset($_GET['write'])) {
+            include('./client/write/index.php');
         } else {
-            include('./client/home.php'); // Default to home page
+            include('./client/home.php'); // Changed from './client/home.php#dropdown'
         }
 
         include './client/footer.php';

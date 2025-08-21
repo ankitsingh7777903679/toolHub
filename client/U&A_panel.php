@@ -42,7 +42,7 @@ if (isset($_SESSION['user']['email']) && $_SESSION['user']['email'] == "ankitsin
             // print_r($_SESSION);
             ?>
         </button>
-        <ul class="dropdown-menu end-0 d-block">
+        <ul class="dropdown-menu end-0">
 
             <li class="border-bottom my-2 pb-1">
                 <a class="dropdown-item d-flex align-items-center justify-content-center gap-3 px-0">
