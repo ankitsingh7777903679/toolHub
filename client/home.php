@@ -15,7 +15,7 @@
             <div class="toll_tools d-flex overflow-x-auto gap-lg-0 gap-2">
                 <div class="col px-lg-1">
                     <div class="tool_items " style="background-color: #6f56ec;">
-                        <a href="?write=true" class="tool_content">
+                        <a href="?slipt=true" class="tool_content">
                             <div class="tool_header d-flex justify-content-between align-items-center">
                                 <div class="tool_circle rounded-circle d-flex justify-content-center align-items-center" style="background-color: #9d8cf2;">
                                     <i class="fa-regular fa-file-lines fs-5"></i>
@@ -105,7 +105,7 @@
                 </div>
                 <div class="col px-lg-1">
                     <div class="tool_items col" style="background-color: #1C67CA;">
-                        <a href="" class="tool_content">
+                        <a href="?write=true" class="tool_content">
                             <div class="tool_header d-flex justify-content-between align-items-center">
                                 <div class="tool_circle rounded-circle d-flex justify-content-center align-items-center" style="background-color: #6598DB;">
                                     <i class="fa-regular fa-file-lines fs-5"></i>
@@ -235,7 +235,7 @@
             <div class="tool_blox_result d-flex justify-content-around">
                 <div class="tab-content mt-2 col-lg-12" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="all_tool" role="tabpanel" aria-labelledby="all-tool-tab" tabindex="0">
-                        <div class="text-center mb-4">
+                        <div class=" mb-4">
                             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 mx-0">
                                 <!-- <h1 class="text-center">catogeries</h1> -->
                                 <?php
@@ -243,30 +243,29 @@
                                 $query = "select * from tools";
                                 $result = $conn->query($query);
                                 foreach ($result as $row) {
-                                    $id = $row['id'];
-                                    $tool_title;
-                                    if ($id == 1) {
-                                        $tool_title = 'Pdf Tools';
-                                    } else if ($id == 2) {
-                                        $tool_title = 'Image Tools';
-                                    } else if ($id == 3) {
-                                        $tool_title = 'AI Write';
-                                    } else if ($id == 4) {
-                                        $tool_title = 'Video Tools';
-                                    } else if ($id == 5) {
-                                        $tool_title = 'Converter Tools';
-                                    }
-                                    $tool_name =  ucfirst($row['toll_name']);
-                                    $icon_calss_name = $row['icon_class_name'];
-                                    $icon_color = $row['icon_color'];
-                                    $bg_icon_color = $row['bg_icon_color'];
-                                    $tool_description = $row['tool_description'];
-                                    $tool_link = $row['tool_link'];
-
+                                    $id = $row['tool_category'];
+                                $tool_title;
+                                if ($id == 1) {
+                                    $tool_title = 'Pdf Tools';
+                                } else if ($id == 2) {
+                                    $tool_title = 'Image Tools';
+                                } else if ($id == 3) {
+                                    $tool_title = 'AI Write';
+                                } else if ($id == 4) {
+                                    $tool_title = 'Video Tools';
+                                } else if ($id == 5) {
+                                    $tool_title = 'Converter Tools';
+                                }
+                                $tool_name =  ucfirst($row['toll_name']);
+                                $icon_calss_name = $row['icon_class_name'];
+                                $icon_color = $row['icon_color'];
+                                $bg_icon_color = $row['bg_icon_color'];
+                                $tool_description = $row['tool_description'];
+                                $tool_link = $row['tool_link'];
                                     echo "   
                                     <div class='tool_box_items col'>
-                                        <div class='tool_item p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
-                                            <a href='#' class='tool_content'>
+                                        <div class='tool_item h-100 p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
+                                            <a href='$tool_link' class='tool_content'>
                                                 <div class='tool_header d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-3'>
                                                     <div>
                                                         <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
@@ -283,7 +282,7 @@
                                                 <div class='tool_body d-none d-md-block d-flex justify-content-between align-items-center my-2 gap-3'>
                                                     <div>
                                                         
-                                                        <p class='tool_descr mb-0 text-black' style='font-size: 13px !important;' id='preview-description'>$tool_description</p>
+                                                        <p class='tool_descr text-start mb-0 text-black' style='font-size: 13px !important;' id='preview-description'>$tool_description</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -325,8 +324,8 @@
 
                                 echo "   
                                     <div class='tool_box_items col'>
-                                        <div class='tool_item p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
-                                            <a href='#' class='tool_content'>
+                                        <div class='tool_item h-100 p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
+                                            <a href='$tool_link' class='tool_content'>
                                                 <div class='tool_header d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-3'>
                                                     <div>
                                                         <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
@@ -384,8 +383,8 @@
 
                                 echo "   
                                     <div class='tool_box_items col'>
-                                        <div class='tool_item p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
-                                            <a href='#' class='tool_content'>
+                                        <div class='tool_item h-100 p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
+                                            <a href='$tool_link' class='tool_content'>
                                                 <div class='tool_header d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-3'>
                                                     <div>
                                                         <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
@@ -443,8 +442,8 @@
 
                                 echo "   
                                     <div class='tool_box_items col'>
-                                        <div class='tool_item p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
-                                            <a href='#' class='tool_content'>
+                                        <div class='tool_item h-100 p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
+                                            <a href='$tool_link' class='tool_content'>
                                                 <div class='tool_header d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-3'>
                                                     <div>
                                                         <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
@@ -502,8 +501,8 @@
 
                                 echo "   
                                     <div class='tool_box_items col'>
-                                        <div class='tool_item p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
-                                            <a href='#' class='tool_content'>
+                                        <div class='tool_item h-100 p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
+                                            <a href='$tool_link' class='tool_content'>
                                                 <div class='tool_header d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-3'>
                                                     <div>
                                                         <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
@@ -561,8 +560,8 @@
 
                                 echo "   
                                     <div class='tool_box_items col'>
-                                        <div class='tool_item p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
-                                            <a href='#' class='tool_content'>
+                                        <div class='tool_item h-100 p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
+                                            <a href='$tool_link' class='tool_content'>
                                                 <div class='tool_header d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-3'>
                                                     <div>
                                                         <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>

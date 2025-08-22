@@ -1,7 +1,7 @@
-  <div class="py-3" style="background-color: #F4FAFE;">
+  <div class="py-5" style="background-color: #F4FAFE;">
       <div class="container pdf_tool_head d-flex flex-column justify-content-center align-items-center">
-          <h1 class="mb-4">Ai Write</h1>
-          <p>Free Ai Writing Tools</p>
+          <h1 class="mb-4">Pdf Tools</h1>
+          <p>Free Online PDF Tools</p>
       </div>
       <div class="container pdf_tool_body d-flex justify-content-center align-items-center mt-4">
           <form class="d-flex col-lg-6 search-tool mb-2 mb-lg-0 align-items-center shadow shadow-lg" role="search">
@@ -15,7 +15,7 @@
               <!-- <h1 class="text-center">catogeries</h1> -->
               <?php
                 include('./common/db.php');
-                $query = "select * from tools where tool_category = 3";
+                $query = "select * from tools where tool_category = 1";
                 $result = $conn->query($query);
                 foreach ($result as $row) {
                     $id = $row['tool_category'];
@@ -69,4 +69,5 @@
                 ?>
           </div>
       </div>
+
   </div>

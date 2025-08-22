@@ -27,7 +27,7 @@ session_start();
         include('./client/navbar.php');
 
         if (isset($_GET['pdf'])) {
-            include('./client/pdf.php');
+            include('./client/pdf/pdf.php');
         }elseif (isset($_GET['write'])) {
              include('./client/write/index.php');
         }elseif (isset($_GET['home'])) {
@@ -40,7 +40,19 @@ session_start();
         }
         elseif (isset($_GET['blogPost'])) {
             include('./client/write/blogPost.php');
-        }else {
+        }
+
+        elseif (isset($_GET['splitPdf'])) {
+            include('./client/pdf/split.php');
+        }elseif (isset($_GET['mergePdf'])) {
+            include('./client/pdf/merge.php');
+        }elseif (isset($_GET['imgPdf'])) {
+            include('./client/pdf/imgtopdf.php');
+        }elseif (isset($_GET['htmlPdf'])) {
+            include('./client/pdf/htmltopdf.php');
+        }
+        
+        else {
             include('./client/home.php'); // Changed from './client/home.php#dropdown'
         }
 
