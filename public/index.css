@@ -187,7 +187,10 @@
 .copy_right p{
   font-size: 12px;
 }
-
+.tool_box_items{
+  /* width: 24%; */
+  /* height: 100%; */
+}
 
 @media (max-width: 992px) {
   .home_content h1 {
@@ -212,6 +215,9 @@
     font-size: 35px;
     line-height: 140%;
   }
+  .tool_box_items{
+    /* width: 32%; */
+  }
   
   
 }
@@ -221,6 +227,18 @@
   }
   .tool_item .tool_name{
     font-size: 14px;
+  }
+  .tool_box_items{
+    /* width: 48.5%;; */
+  }
+  .tool_box_items .tool_name{
+    font-size: 12px !important;
+  }
+  .tool_box_items .tool_title{
+    
+  }
+  .tool_box_items .tool_descr{
+    
   }
 
 }

@@ -28,7 +28,7 @@
                                 echo "   
                                     <div class='d-flex' style='border-radius: 15px;'>
                                         <div class='tool_items' id='preview-card' style='background-color: #FFFFFF; width: 210px;'>
-                                            <a href='#' class='tool_content' onclick='event.preventDefault();'>
+                                            <a href='#' class='tool_content'>
                                                 <div class='tool_header d-flex justify-content-between align-items-center'>
                                                     <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
                                                         <i class='fa-regular fa-file-lines fs-5' id='preview-icon' style='color: $icon_color;'></i>

@@ -28,11 +28,19 @@ session_start();
 
         if (isset($_GET['pdf'])) {
             include('./client/pdf.php');
-        } elseif (isset($_GET['home'])) {
+        }elseif (isset($_GET['write'])) {
+             include('./client/write/index.php');
+        }elseif (isset($_GET['home'])) {
             include('./client/home.php');
-        } elseif (isset($_GET['write'])) {
-            include('./client/write/index.php');
-        } else {
+        }elseif (isset($_GET['coldEmail'])) {
+            include('./client/write/coldEmail.php');
+        }
+        elseif (isset($_GET['assayWriter'])) {
+            include('./client/write/assay.php');
+        }
+        elseif (isset($_GET['blogPost'])) {
+            include('./client/write/blogPost.php');
+        }else {
             include('./client/home.php'); // Changed from './client/home.php#dropdown'
         }
 

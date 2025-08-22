@@ -232,72 +232,71 @@
                 </div>
             </div>
 
-            <div class="tool_blox_result d-flex justify-content-center">
-                <div class="tab-content mt-2 col-lg-9" id="nav-tabContent">
+            <div class="tool_blox_result d-flex justify-content-around">
+                <div class="tab-content mt-2 col-lg-12" id="nav-tabContent">
                     <div class="tab-pane fade show active" id="all_tool" role="tabpanel" aria-labelledby="all-tool-tab" tabindex="0">
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
-                            <!-- <h1 class="text-center">catogeries</h1> -->
-                            <?php
-                            include('./common/db.php');
-                            $query = "select * from tools";
-                            $result = $conn->query($query);
-                            foreach ($result as $row) {
-                                $id = $row['id'];
-                                $tool_title;
-                                if ($id == 1) {
-                                    $tool_title = 'Pdf Tools';
-                                } else if ($id == 2) {
-                                    $tool_title = 'Image Tools';
-                                } else if ($id == 3) {
-                                    $tool_title = 'AI Write';
-                                } else if ($id == 4) {
-                                    $tool_title = 'Video Tools';
-                                } else if ($id == 5) {
-                                    $tool_title = 'Converter Tools';
-                                }
-                                $tool_name =  ucfirst($row['toll_name']);
-                                $icon_calss_name = $row['icon_class_name'];
-                                $icon_color = $row['icon_color'];
-                                $bg_icon_color = $row['bg_icon_color'];
-                                $tool_description = $row['tool_description'];
-                                $tool_link = $row['tool_link'];
+                        <div class="text-center mb-4">
+                            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 mx-0">
+                                <!-- <h1 class="text-center">catogeries</h1> -->
+                                <?php
+                                include('./common/db.php');
+                                $query = "select * from tools";
+                                $result = $conn->query($query);
+                                foreach ($result as $row) {
+                                    $id = $row['id'];
+                                    $tool_title;
+                                    if ($id == 1) {
+                                        $tool_title = 'Pdf Tools';
+                                    } else if ($id == 2) {
+                                        $tool_title = 'Image Tools';
+                                    } else if ($id == 3) {
+                                        $tool_title = 'AI Write';
+                                    } else if ($id == 4) {
+                                        $tool_title = 'Video Tools';
+                                    } else if ($id == 5) {
+                                        $tool_title = 'Converter Tools';
+                                    }
+                                    $tool_name =  ucfirst($row['toll_name']);
+                                    $icon_calss_name = $row['icon_class_name'];
+                                    $icon_color = $row['icon_color'];
+                                    $bg_icon_color = $row['bg_icon_color'];
+                                    $tool_description = $row['tool_description'];
+                                    $tool_link = $row['tool_link'];
 
-                                echo "   
-                                    <div class='d-flex'>
+                                    echo "   
+                                    <div class='tool_box_items col'>
                                         <div class='tool_item p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
-                                            <a href='#' class='tool_content' onclick='event.preventDefault();'>
-                                                <div class='tool_header d-flex align-items-center gap-3'>
-                                                <div>
-                                                    <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
-                                                        <i class='fa-regular fa-file-lines fs-5' id='preview-icon' style='color: $icon_color;'></i>
-                                                        
+                                            <a href='#' class='tool_content'>
+                                                <div class='tool_header d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-3'>
+                                                    <div>
+                                                        <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
+                                                            <i class='fa-regular fa-file-lines fs-5' id='preview-icon' style='color: $icon_color;'></i>
+                                                            
+                                                        </div>
                                                     </div>
-                                                </div>
                                                     
                                                     <div>
-                                                        <p class='tool_name mb-0 fw-bolder text-black' id='preview-tool-name'>$tool_name</p>
-                                                        <span class='mb-0' style='font-size: 12px !important; color: $icon_color;'>$tool_title</span>
+                                                        <p class='tool_name mb-0 fw-bolder text-black' id='preview-tool-name' style='font-size: 14px;'>$tool_name</p>
+                                                        <span ='tool_title' class='mb-0' style='font-size: 11px !important; color: $icon_color;'>$tool_title</span>
                                                     </div>
                                                 </div>
-                                                <div class='tool_body d-flex justify-content-between align-items-center my-2 gap-3'>
+                                                <div class='tool_body d-none d-md-block d-flex justify-content-between align-items-center my-2 gap-3'>
                                                     <div>
                                                         
-                                                        <p class='tool_descr mb-0 text-black' style='font-size: 14px !important;' id='preview-description'>$tool_description</p>
-                                                    </div>
-                                                    <div>
-                                                        <i class='fa-solid fa-arrow-right text-black'></i>
+                                                        <p class='tool_descr mb-0 text-black' style='font-size: 13px !important;' id='preview-description'>$tool_description</p>
                                                     </div>
                                                 </div>
                                             </a>
                                         </div>
                                     </div>
                                 ";
-                            }
-                            ?>
+                                }
+                                ?>
+                            </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="pdf_tool" role="tabpanel" aria-labelledby="pdf-tool-tab" tabindex="0">
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
                             <!-- <h1 class="text-center">catogeries</h1> -->
                             <?php
                             include('./common/db.php');
@@ -325,29 +324,26 @@
                                 $tool_link = $row['tool_link'];
 
                                 echo "   
-                                    <div class='d-flex' style=''>
-                                        <div class='tool_items p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;width:200px  border-radius:15px'>
-                                            <a href='#' class='tool_content' onclick='event.preventDefault();'>
-                                                <div class='tool_header d-flex align-items-center gap-3'>
-                                                <div>
-                                                    <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
-                                                        <i class='fa-regular fa-file-lines fs-5' id='preview-icon' style='color: $icon_color;'></i>
-                                                        
+                                    <div class='tool_box_items col'>
+                                        <div class='tool_item p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
+                                            <a href='#' class='tool_content'>
+                                                <div class='tool_header d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-3'>
+                                                    <div>
+                                                        <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
+                                                            <i class='fa-regular fa-file-lines fs-5' id='preview-icon' style='color: $icon_color;'></i>
+                                                            
+                                                        </div>
                                                     </div>
-                                                </div>
                                                     
                                                     <div>
-                                                        <p class='tool_name mb-0 fw-bolder text-black' id='preview-tool-name'>$tool_name</p>
-                                                        <span class='mb-0' style='font-size: 12px !important; color: $icon_color;'>$tool_title</span>
+                                                        <p class='tool_name mb-0 fw-bolder text-black' id='preview-tool-name' style='font-size: 14px;'>$tool_name</p>
+                                                        <span ='tool_title' class='mb-0' style='font-size: 11px !important; color: $icon_color;'>$tool_title</span>
                                                     </div>
                                                 </div>
-                                                <div class='tool_body d-flex justify-content-between align-items-center my-2 gap-3'>
+                                                <div class='tool_body d-none d-md-block d-flex justify-content-between align-items-center my-2 gap-3'>
                                                     <div>
                                                         
-                                                        <p class='tool_descr mb-0 text-black' style='font-size: 14px !important;' id='preview-description'>$tool_description</p>
-                                                    </div>
-                                                    <div>
-                                                        <i class='fa-solid fa-arrow-right text-black'></i>
+                                                        <p class='tool_descr mb-0 text-black' style='font-size: 13px !important;' id='preview-description'>$tool_description</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -359,7 +355,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="video_tool" role="tabpanel" aria-labelledby="video-tool-tab" tabindex="0">
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
                             <!-- <h1 class="text-center">catogeries</h1> -->
                             <?php
                             include('./common/db.php');
@@ -387,29 +383,26 @@
                                 $tool_link = $row['tool_link'];
 
                                 echo "   
-                                    <div class='d-flex'>
+                                    <div class='tool_box_items col'>
                                         <div class='tool_item p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
-                                            <a href='#' class='tool_content' onclick='event.preventDefault();'>
-                                                <div class='tool_header d-flex align-items-center gap-3'>
-                                                <div>
-                                                    <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
-                                                        <i class='fa-regular fa-file-lines fs-5' id='preview-icon' style='color: $icon_color;'></i>
-                                                        
+                                            <a href='#' class='tool_content'>
+                                                <div class='tool_header d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-3'>
+                                                    <div>
+                                                        <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
+                                                            <i class='fa-regular fa-file-lines fs-5' id='preview-icon' style='color: $icon_color;'></i>
+                                                            
+                                                        </div>
                                                     </div>
-                                                </div>
                                                     
                                                     <div>
-                                                        <p class='tool_name mb-0 fw-bolder text-black' id='preview-tool-name'>$tool_name</p>
-                                                        <span class='mb-0' style='font-size: 12px !important; color: $icon_color;'>$tool_title</span>
+                                                        <p class='tool_name mb-0 fw-bolder text-black' id='preview-tool-name' style='font-size: 14px;'>$tool_name</p>
+                                                        <span ='tool_title' class='mb-0' style='font-size: 11px !important; color: $icon_color;'>$tool_title</span>
                                                     </div>
                                                 </div>
-                                                <div class='tool_body d-flex justify-content-between align-items-center my-2 gap-3'>
+                                                <div class='tool_body d-none d-md-block d-flex justify-content-between align-items-center my-2 gap-3'>
                                                     <div>
                                                         
-                                                        <p class='tool_descr mb-0 text-black' style='font-size: 14px !important;' id='preview-description'>$tool_description</p>
-                                                    </div>
-                                                    <div>
-                                                        <i class='fa-solid fa-arrow-right text-black'></i>
+                                                        <p class='tool_descr mb-0 text-black' style='font-size: 13px !important;' id='preview-description'>$tool_description</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -421,7 +414,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="image_tool" role="tabpanel" aria-labelledby="image-tool-tab" tabindex="0">
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
                             <!-- <h1 class="text-center">catogeries</h1> -->
                             <?php
                             include('./common/db.php');
@@ -449,29 +442,26 @@
                                 $tool_link = $row['tool_link'];
 
                                 echo "   
-                                    <div class='d-flex'>
+                                    <div class='tool_box_items col'>
                                         <div class='tool_item p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
-                                            <a href='#' class='tool_content' onclick='event.preventDefault();'>
-                                                <div class='tool_header d-flex align-items-center gap-3'>
-                                                <div>
-                                                    <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
-                                                        <i class='fa-regular fa-file-lines fs-5' id='preview-icon' style='color: $icon_color;'></i>
-                                                        
+                                            <a href='#' class='tool_content'>
+                                                <div class='tool_header d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-3'>
+                                                    <div>
+                                                        <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
+                                                            <i class='fa-regular fa-file-lines fs-5' id='preview-icon' style='color: $icon_color;'></i>
+                                                            
+                                                        </div>
                                                     </div>
-                                                </div>
                                                     
                                                     <div>
-                                                        <p class='tool_name mb-0 fw-bolder text-black' id='preview-tool-name'>$tool_name</p>
-                                                        <span class='mb-0' style='font-size: 12px !important; color: $icon_color;'>$tool_title</span>
+                                                        <p class='tool_name mb-0 fw-bolder text-black' id='preview-tool-name' style='font-size: 14px;'>$tool_name</p>
+                                                        <span ='tool_title' class='mb-0' style='font-size: 11px !important; color: $icon_color;'>$tool_title</span>
                                                     </div>
                                                 </div>
-                                                <div class='tool_body d-flex justify-content-between align-items-center my-2 gap-3'>
+                                                <div class='tool_body d-none d-md-block d-flex justify-content-between align-items-center my-2 gap-3'>
                                                     <div>
                                                         
-                                                        <p class='tool_descr mb-0 text-black' style='font-size: 14px !important;' id='preview-description'>$tool_description</p>
-                                                    </div>
-                                                    <div>
-                                                        <i class='fa-solid fa-arrow-right text-black'></i>
+                                                        <p class='tool_descr mb-0 text-black' style='font-size: 13px !important;' id='preview-description'>$tool_description</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -483,7 +473,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="convert_tool" role="tabpanel" aria-labelledby="convert-tool-tab" tabindex="0">
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
                             <!-- <h1 class="text-center">catogeries</h1> -->
                             <?php
                             include('./common/db.php');
@@ -511,29 +501,26 @@
                                 $tool_link = $row['tool_link'];
 
                                 echo "   
-                                    <div class='d-flex'>
+                                    <div class='tool_box_items col'>
                                         <div class='tool_item p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
-                                            <a href='#' class='tool_content' onclick='event.preventDefault();'>
-                                                <div class='tool_header d-flex align-items-center gap-3'>
-                                                <div>
-                                                    <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
-                                                        <i class='fa-regular fa-file-lines fs-5' id='preview-icon' style='color: $icon_color;'></i>
-                                                        
+                                            <a href='#' class='tool_content'>
+                                                <div class='tool_header d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-3'>
+                                                    <div>
+                                                        <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
+                                                            <i class='fa-regular fa-file-lines fs-5' id='preview-icon' style='color: $icon_color;'></i>
+                                                            
+                                                        </div>
                                                     </div>
-                                                </div>
                                                     
                                                     <div>
-                                                        <p class='tool_name mb-0 fw-bolder text-black' id='preview-tool-name'>$tool_name</p>
-                                                        <span class='mb-0' style='font-size: 12px !important; color: $icon_color;'>$tool_title</span>
+                                                        <p class='tool_name mb-0 fw-bolder text-black' id='preview-tool-name' style='font-size: 14px;'>$tool_name</p>
+                                                        <span ='tool_title' class='mb-0' style='font-size: 11px !important; color: $icon_color;'>$tool_title</span>
                                                     </div>
                                                 </div>
-                                                <div class='tool_body d-flex justify-content-between align-items-center my-2 gap-3'>
+                                                <div class='tool_body d-none d-md-block d-flex justify-content-between align-items-center my-2 gap-3'>
                                                     <div>
                                                         
-                                                        <p class='tool_descr mb-0 text-black' style='font-size: 14px !important;' id='preview-description'>$tool_description</p>
-                                                    </div>
-                                                    <div>
-                                                        <i class='fa-solid fa-arrow-right text-black'></i>
+                                                        <p class='tool_descr mb-0 text-black' style='font-size: 13px !important;' id='preview-description'>$tool_description</p>
                                                     </div>
                                                 </div>
                                             </a>
@@ -545,7 +532,7 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="ai_tool" role="tabpanel" aria-labelledby="ai-tool-tab" tabindex="0">
-                        <div class="d-flex flex-wrap justify-content-center gap-2">
+                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
                             <!-- <h1 class="text-center">catogeries</h1> -->
                             <?php
                             include('./common/db.php');
@@ -573,29 +560,26 @@
                                 $tool_link = $row['tool_link'];
 
                                 echo "   
-                                    <div class='d-flex'>
+                                    <div class='tool_box_items col'>
                                         <div class='tool_item p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
-                                            <a href='#' class='tool_content' onclick='event.preventDefault();'>
-                                                <div class='tool_header d-flex align-items-center gap-3'>
-                                                <div>
-                                                    <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
-                                                        <i class='fa-regular fa-file-lines fs-5' id='preview-icon' style='color: $icon_color;'></i>
-                                                        
+                                            <a href='#' class='tool_content'>
+                                                <div class='tool_header d-flex flex-column flex-md-row align-items-start align-items-md-center gap-2 gap-md-3'>
+                                                    <div>
+                                                        <div class='tool_circle rounded d-flex justify-content-center align-items-center' id='preview-icon-bg' style='background-color: $bg_icon_color;'>
+                                                            <i class='fa-regular fa-file-lines fs-5' id='preview-icon' style='color: $icon_color;'></i>
+                                                            
+                                                        </div>
                                                     </div>
-                                                </div>
                                                     
                                                     <div>
-                                                        <p class='tool_name mb-0 fw-bolder text-black' id='preview-tool-name'>$tool_name</p>
-                                                        <span class='mb-0' style='font-size: 12px !important; color: $icon_color;'>$tool_title</span>
+                                                        <p class='tool_name mb-0 fw-bolder text-black' id='preview-tool-name' style='font-size: 14px;'>$tool_name</p>
+                                                        <span ='tool_title' class='mb-0' style='font-size: 11px !important; color: $icon_color;'>$tool_title</span>
                                                     </div>
                                                 </div>
-                                                <div class='tool_body d-flex justify-content-between align-items-center my-2 gap-3'>
+                                                <div class='tool_body d-none d-md-block d-flex justify-content-between align-items-center my-2 gap-3'>
                                                     <div>
                                                         
-                                                        <p class='tool_descr mb-0 text-black' style='font-size: 14px !important;' id='preview-description'>$tool_description</p>
-                                                    </div>
-                                                    <div>
-                                                        <i class='fa-solid fa-arrow-right text-black'></i>
+                                                        <p class='tool_descr mb-0 text-black' style='font-size: 13px !important;' id='preview-description'>$tool_description</p>
                                                     </div>
                                                 </div>
                                             </a>

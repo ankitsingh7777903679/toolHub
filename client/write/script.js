@@ -1,6 +1,7 @@
 function generateResponse() {
     var text = document.getElementById("text");
     var pera = document.getElementById("pera");
+    var promptType = document.getElementById("promptType");
     var response = document.getElementById("response");
     var datetime = document.getElementById("datetime");
 
@@ -14,7 +15,8 @@ function generateResponse() {
         method: "POST",
         body: JSON.stringify({ 
             text: text.value, 
-            pera: pera.value }),
+            pera: pera.value,
+            promptType: promptType.value}),
         headers: {
             "Content-Type": "application/json"
         }
