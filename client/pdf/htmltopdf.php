@@ -77,7 +77,7 @@
         <div class="con shadow-lg">
             <div class="card">
                 <h2>Enter HTML</h2>
-                <textarea id="htmlInput" placeholder="Type your HTML here..."></textarea>
+                <textarea class="form-control" id="htmlInput" placeholder="Type your HTML here..."></textarea>
                 <button id="convertButton">Convert to PDF</button>
                 <p id="status"></p>
             </div>

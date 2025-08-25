@@ -170,7 +170,7 @@
         <div class="row">
             <div class="col-4 card">
                 <h2>Upload PDF</h2>
-                <input type="file" id="pdfInput" accept=".pdf">
+                <input class="form-control" type="file" id="pdfInput" accept=".pdf">
 
                 <h2>Select Pages to Split</h2>
                 <button id="selectRangeButton">Select Range</button>

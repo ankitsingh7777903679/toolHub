@@ -132,7 +132,7 @@
         <div class="card ">
             <h1>PDF Merger</h1>
             <div class="file-input-container">
-                <input type="file" id="fileInput" multiple accept=".pdf">
+                <input class="form-control" type="file" id="fileInput" multiple accept=".pdf">
             </div>
             <ul id="fileList"></ul>
             <button id="mergeButton" disabled>Merge PDFs</button>

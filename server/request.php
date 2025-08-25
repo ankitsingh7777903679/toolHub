@@ -78,5 +78,15 @@ if (isset($_POST['signup'])) {
     }
 
     
+} else if (isset($_POST['delete_user'])) {
+    $user_id = $_POST['user_id'];
+    $stmt = $conn->prepare("DELETE FROM users WHERE id = ?");
+    $stmt->bind_param("i", $user_id);
+    if ($stmt->execute()) {
+        header("Location: /toolHub/?admin=true&page=users");
+    } else {
+        echo "Error deleting record: " . $conn->error;
+    }
+    $stmt->close();
 }
 ?>

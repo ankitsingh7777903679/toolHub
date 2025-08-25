@@ -56,7 +56,9 @@ session_start();
         elseif (isset($_GET['image'])) {
             include('./client/image/image.php');
         }
-        elseif (isset($_GET['imgGen'])) {
+        elseif (isset($_GET['aiImg'])) {
+            include('./client/image/imageGen.php');
+        }elseif (isset($_GET['webpTojpg'])) {
             include('./client/image/WebpTojpg.php');
         }
     

@@ -98,7 +98,7 @@
         <div class="con shadow-lg">
             <div class="card">
                 <h2>Upload Images</h2>
-                <input type="file" id="imageInput" multiple accept="image/*">
+                <input class="form-control" type="file" id="imageInput" multiple accept="image/*">
                 <div id="previewContainer"></div>
                 <button id="convertButton" disabled>Convert to PDF</button>
                 <p id="status"></p>

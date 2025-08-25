@@ -15,7 +15,7 @@
               <!-- <h1 class="text-center">catogeries</h1> -->
               <?php
                 include('./common/db.php');
-                $query = "select * from tools where tool_category = 1";
+                $query = "select * from tools where tool_category = 2";
                 $result = $conn->query($query);
                 foreach ($result as $row) {
                     $id = $row['tool_category'];

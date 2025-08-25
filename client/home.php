@@ -45,7 +45,7 @@
                 </div>
                 <div class="col px-lg-1">
                     <div class="tool_items col" style="background-color: #F66213;">
-                        <a href="?imgGen=true" class="tool_content">
+                        <a href="?image=true" class="tool_content">
                             <div class="tool_header d-flex justify-content-between align-items-center">
                                 <div class="tool_circle rounded-circle d-flex justify-content-center align-items-center" style="background-color: #F8935F;">
                                     <i class="fa-regular fa-file-lines fs-5"></i>

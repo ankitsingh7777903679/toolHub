@@ -40,7 +40,12 @@ $result = $conn->query($query);
                                     <td><?php echo htmlspecialchars($row['username']); ?></td>
                                     <td><?php echo htmlspecialchars($row['email']); ?></td>
                                     <td class="text-center">
-                                        <button class="btn btn-sm btn-outline-danger" title="Delete"><i class="fa-solid fa-trash"></i></button>
+                                        <form method="post" action="./server/request.php" onsubmit="return confirm('Are you sure you want to delete this user?');">
+                                            <input type="hidden" name="user_id" value="<?php echo $row['id']; ?>">
+                                            <button type="submit" name="delete_user" class="btn btn-sm btn-outline-danger" title="Delete">
+                                                <i class="fa-solid fa-trash"></i>
+                                            </button>
+                                        </form>
                                     </td>
                                 </tr>
                             <?php
