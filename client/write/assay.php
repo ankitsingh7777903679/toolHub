@@ -126,7 +126,7 @@
         </div>
 
         <div class="row g-4">
-        
+
             <div class="card col-12 col-md-4">
                 <div class="mb-3">
                     <label for="text" class="form-label">Enter Prompt</label>
@@ -148,7 +148,7 @@
                         <option value="10">Ten</option>
                     </select>
                 </div>
-                                <input type="hidden" name="tool" id="promptType" value="assay">
+                <input type="hidden" name="tool" id="promptType" value="assay">
 
                 <button onclick="generateResponse();" class="btn btn-primary btn-generet">Generate</button>
             </div>

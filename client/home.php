@@ -15,7 +15,7 @@
             <div class="toll_tools d-flex overflow-x-auto gap-lg-0 gap-2">
                 <div class="col px-lg-1">
                     <div class="tool_items " style="background-color: #6f56ec;">
-                        <a href="?slipt=true" class="tool_content">
+                        <a href="?pdf=true" class="tool_content">
                             <div class="tool_header d-flex justify-content-between align-items-center">
                                 <div class="tool_circle rounded-circle d-flex justify-content-center align-items-center" style="background-color: #9d8cf2;">
                                     <i class="fa-regular fa-file-lines fs-5"></i>
@@ -45,7 +45,7 @@
                 </div>
                 <div class="col px-lg-1">
                     <div class="tool_items col" style="background-color: #F66213;">
-                        <a href="" class="tool_content">
+                        <a href="?imgGen=true" class="tool_content">
                             <div class="tool_header d-flex justify-content-between align-items-center">
                                 <div class="tool_circle rounded-circle d-flex justify-content-center align-items-center" style="background-color: #F8935F;">
                                     <i class="fa-regular fa-file-lines fs-5"></i>

@@ -51,6 +51,15 @@ session_start();
         }elseif (isset($_GET['htmlPdf'])) {
             include('./client/pdf/htmltopdf.php');
         }
+
+
+        elseif (isset($_GET['image'])) {
+            include('./client/image/image.php');
+        }
+        elseif (isset($_GET['imgGen'])) {
+            include('./client/image/WebpTojpg.php');
+        }
+    
         
         else {
             include('./client/home.php'); // Changed from './client/home.php#dropdown'

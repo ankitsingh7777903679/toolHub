@@ -7,7 +7,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav gap-4 me-auto ms-auto mb-2 mb-lg-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="?pdf=true">
+                    <a class="nav-link dropdown-toggle" href="?pdf=true" >
                         PDF
                     </a>
                     <ul class="dropdown-menu">
