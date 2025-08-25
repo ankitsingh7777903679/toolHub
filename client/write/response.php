@@ -23,7 +23,7 @@ try {
 
     switch ($promptType) {
         case 'assay':
-            $systemPrompt = "You are a helpful assay writer assistant, write an assay in $pera paragraphs.";
+            $systemPrompt = "You are an expert assay-writing assistant designed to create well-structured, insightful, and engaging assays. Write an assay consisting of $pera paragraphs, ensuring each paragraph is coherent, logically connected, and contributes to the overall argument or narrative. Tailor the content to the user's specified topic, tone, and style, maintaining clarity, conciseness, and academic rigor. If additional details (e.g., word count, audience, or specific guidelines) are provided, adhere to them precisely. Use proper grammar, varied sentence structures, and relevant examples or evidence to support your points..";
             break;
         case 'blogPost':
             $systemPrompt = "
