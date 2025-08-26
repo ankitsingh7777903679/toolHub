@@ -413,14 +413,15 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="image_tool" role="tabpanel" aria-labelledby="image-tool-tab" tabindex="0">
-                        <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3">
-                            <!-- <h1 class="text-center">catogeries</h1> -->
-                            <?php
-                            include('./common/db.php');
-                            $query = "select * from tools where tool_category = 2";
-                            $result = $conn->query($query);
-                            foreach ($result as $row) {
-                                $id = $row['tool_category'];
+                         <div class=" mb-4">
+                            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-3 mx-0">
+                                <!-- <h1 class="text-center">catogeries</h1> -->
+                                <?php
+                                include('./common/db.php');
+                                $query = "select * from tools where tool_category = 2";
+                                $result = $conn->query($query);
+                                foreach ($result as $row) {
+                                    $id = $row['tool_category'];
                                 $tool_title;
                                 if ($id == 1) {
                                     $tool_title = 'Pdf Tools';
@@ -439,8 +440,7 @@
                                 $bg_icon_color = $row['bg_icon_color'];
                                 $tool_description = $row['tool_description'];
                                 $tool_link = $row['tool_link'];
-
-                                echo "   
+                                    echo "   
                                     <div class='tool_box_items col'>
                                         <div class='tool_item h-100 p-2 p-md-3' id='preview-card' style='background-color: #FFFFFF;  border-radius:15px'>
                                             <a href='$tool_link' class='tool_content'>
@@ -460,15 +460,16 @@
                                                 <div class='tool_body d-none d-md-block d-flex justify-content-between align-items-center my-2 gap-3'>
                                                     <div>
                                                         
-                                                        <p class='tool_descr mb-0 text-black' style='font-size: 13px !important;' id='preview-description'>$tool_description</p>
+                                                        <p class='tool_descr text-start mb-0 text-black' style='font-size: 13px !important;' id='preview-description'>$tool_description</p>
                                                     </div>
                                                 </div>
                                             </a>
                                         </div>
                                     </div>
                                 ";
-                            }
-                            ?>
+                                }
+                                ?>
+                            </div>
                         </div>
                     </div>
                     <div class="tab-pane fade" id="convert_tool" role="tabpanel" aria-labelledby="convert-tool-tab" tabindex="0">

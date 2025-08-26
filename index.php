@@ -1,13 +1,11 @@
-<?php
-session_start();
-?>
+<?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>TollHub</title>
     <?php
     include('./client/bootstrap.php');
     ?>
@@ -21,71 +19,67 @@ session_start();
     if (isset($_SESSION['user']['email']) && $_SESSION['user']['email'] == "ankitsingh77779036@gmail.com" && isset($_SESSION['user']['password']) && $_SESSION['user']['password'] == "ankit@1234") {
         // If the user is an admin, only show the admin panel without th        
         include('./admin/admin.php');
-
     } else {
         // Otherwise, show the normal website for guests and regular users.
         include('./client/navbar.php');
 
-        if (isset($_GET['pdf'])) {
-            include('./client/pdf/pdf.php');
-        }elseif (isset($_GET['write'])) {
-             include('./client/write/index.php');
-        }elseif (isset($_GET['home'])) {
+        if (isset($_GET['home'])) {
             include('./client/home.php');
-        }elseif (isset($_GET['coldEmail'])) {
+        }
+
+        elseif (isset($_GET['write'])) {
+            include('./client/write/index.php');
+        } elseif (isset($_GET['coldEmail'])) {
             include('./client/write/coldEmail.php');
-        }
-        elseif (isset($_GET['assayWriter'])) {
+        } elseif (isset($_GET['assayWriter'])) {
             include('./client/write/assay.php');
-        }
-        elseif (isset($_GET['blogPost'])) {
+        } elseif (isset($_GET['blogPost'])) {
             include('./client/write/blogPost.php');
+        } elseif (isset($_GET['summarizing'])) {
+            include('./client/write/summariz.php');
         }
 
-        elseif (isset($_GET['splitPdf'])) {
+        elseif (isset($_GET['pdf'])) {
+            include('./client/pdf/pdf.php');
+        } elseif (isset($_GET['splitPdf'])) {
             include('./client/pdf/split.php');
-        }elseif (isset($_GET['mergePdf'])) {
+        } elseif (isset($_GET['mergePdf'])) {
             include('./client/pdf/merge.php');
-        }elseif (isset($_GET['imgPdf'])) {
+        } elseif (isset($_GET['imgPdf'])) {
             include('./client/pdf/imgtopdf.php');
-        }elseif (isset($_GET['htmlPdf'])) {
+        } elseif (isset($_GET['htmlPdf'])) {
             include('./client/pdf/htmltopdf.php');
-        }
 
-
-        elseif (isset($_GET['image'])) {
+        } elseif (isset($_GET['image'])) {
             include('./client/image/image.php');
-        }
-        elseif (isset($_GET['aiImg'])) {
+        } elseif (isset($_GET['aiImg'])) {
             include('./client/image/imageGen.php');
-        }elseif (isset($_GET['webpTojpg'])) {
+        } elseif (isset($_GET['webpTojpg'])) {
             include('./client/image/WebpTojpg.php');
-        }
-    
-        
-        else {
+
+        } else {
             include('./client/home.php'); // Changed from './client/home.php#dropdown'
         }
 
         include './client/footer.php';
     }
 
-   
-        // Otherwise, show the normal website for guests and regular users.
-       //  include('./client/navbar.php');
 
-        // if (isset($_GET['pdf'])) {
-        //     include('./client/pdf.php');
-        // } elseif (isset($_GET['home'])) {
-        //     include('./client/home.php');
-        // }elseif (isset($_GET['admin'])) {
-        //     include('./admin/admin.php');
-        // } else {
-        //     include('./client/home.php'); // Default to home page
-        // }
+    // Otherwise, show the normal website for guests and regular users.
+    //  include('./client/navbar.php');
 
-        // include './client/footer.php';
-    
+    // if (isset($_GET['pdf'])) {
+    //     include('./client/pdf.php');
+    // } elseif (isset($_GET['home'])) {
+    //     include('./client/home.php');
+    // }elseif (isset($_GET['admin'])) {
+    //     include('./admin/admin.php');
+    // } else {
+    //     include('./client/home.php'); // Default to home page
+    // }
+
+    // include './client/footer.php';
+
     ?>
 
 </body>

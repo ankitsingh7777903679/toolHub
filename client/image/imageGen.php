@@ -336,7 +336,7 @@
                 imageUrls.forEach((url, index) => {
                     if (url) {
                         const container = document.createElement('div');
-                        container.className = 'generated-image-container col';
+                        container.className = 'generated-image-container col p-0';
 
                         const img = document.createElement('img');
                         img.src = url;
