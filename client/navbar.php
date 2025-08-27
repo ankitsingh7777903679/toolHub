@@ -432,9 +432,9 @@
             <div class="d-flex align-items-center gap-1 justify-content-center mb-3 mb-lg-0">
                 <!-- <img src="./svg/moon.svg" alt="img" width="30px" height="30px" class="me-1 navbar-icon"> -->
                 <!-- Replace the moon.svg img with this button -->
-                <button class="mode border-0 theme-toggle me-1" id="themeSwitcher" aria-label="Toggle theme">
+                <!-- <button class="mode border-0 theme-toggle me-1" id="themeSwitcher" aria-label="Toggle theme">
                     <i class="fa-regular fa-sun fs-1" id="themeIcon"></i>
-                </button>
+                </button> -->
                 <img src="./svg/share.svg" data-bs-target="#share" data-bs-toggle="modal" alt="share" width="30px" height="30px" class="me-2 navbar-icon">
             </div>
             <!-- share with  -->
@@ -475,12 +475,12 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> 
                 </div>
             </div>
-            <form class="d-flex search-nav mb-2 mb-lg-0" role="search">
+            <form class="d-flex search-nav mb-2 mb-lg-0" >
                 <button class="search-btn btn pe-0" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #8B8D8F;"></i></button>
-                <input class="search-input form-control form-control-sm border border-0" type="search" placeholder="Search" aria-label="Search" style="background: none; color: #8B8D8F; ">
+                <input class="search-input form-control form-control-sm border border-0" type="search" placeholder="Search"  style="background: none; color: #8B8D8F; ">
             </form>
             
             <!-- signUp, login, user & admin panel -->

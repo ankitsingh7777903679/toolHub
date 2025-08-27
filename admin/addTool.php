@@ -6,7 +6,7 @@
             <h1 class="text-center">Add new Tool</h1>
             <div class="mb-3 col-6 ">
                 <label for="tool_name" class="form-label">Tool Name</label>
-                <input type="text" name="tool_name" class="form-control" id="tool_name" placeholder="enter tool name">
+                <input type="text" name="tool_name" class="form-control" id="tool_name" placeholder="enter tool name" required>
             </div>
 
             <div class="mb-3 col-6 ">
@@ -18,12 +18,12 @@
                 <div class="d-flex gap-3">
                     <div>
                         <label for="icon_color" class="form-label">Icon Color</label>
-                        <input type="color" class="form-control form-control-color" id="icon_color" name="icon_color" value="#FF5975" title="Choose your color">
+                        <input type="color" class="form-control form-control-color" id="icon_color" name="icon_color" value="#FF5975" title="Choose your color" required>
 
                     </div>
                     <div>
                         <label for="iconbg_color" class="form-label">Bg Icon Color</label>
-                        <input type="color" class="form-control form-control-color" id="iconbg_color" name="bg_icon_color" value="#FFE0E6" title="Choose your color">
+                        <input type="color" class="form-control form-control-color" id="iconbg_color" name="bg_icon_color" value="#FFE0E6" title="Choose your color" required>
 
                     </div>
                 </div>
@@ -33,7 +33,7 @@
 
             <div class="mb-3 col-6 ">
                 <label for="tool_description" class="form-label">Tool Description</label>
-                <textarea name="tool_description" class="form-control" id="tool_description" placeholder="Enter Description"></textarea>
+                <textarea name="tool_description" class="form-control" id="tool_description" placeholder="Enter Description" required></textarea>
             </div>
 
             <div class="mb-3 col-6 ">
@@ -45,7 +45,7 @@
 
             <div class="mb-3 col-6 ">
                 <label for="tool_link" class="form-label">Tool Link</label>
-                <input type="text" name="tool_link" class="form-control" id="tool_link" placeholder="tool link">
+                <input type="text" name="tool_link" class="form-control" id="tool_link" placeholder="tool link" required>
             </div>
             <div>
             <button type="submit" name="addtool" class="btn btn-primary btn col-3">Add Tool</button>

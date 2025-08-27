@@ -14,6 +14,12 @@
 
 <body>
     <?php
+    if (isset($_SESSION['error'])) {
+        echo "<script>alert('" . $_SESSION['error'] . "');</script>";
+        unset($_SESSION['error']);
+    }
+    ?>
+    <?php
     // IMPORTANT: This is not a secure way to check for an admin.
     // You should use a role-based system instead of hardcoding an email.
     if (isset($_SESSION['user']['email']) && $_SESSION['user']['email'] == "ankitsingh77779036@gmail.com" && isset($_SESSION['user']['password']) && $_SESSION['user']['password'] == "ankit@1234") {
@@ -56,8 +62,17 @@
             include('./client/image/imageGen.php');
         } elseif (isset($_GET['webpTojpg'])) {
             include('./client/image/WebpTojpg.php');
-
-        } else {
+        } elseif (isset($_GET['tool_link'])) {
+            $tool_link = $_GET['tool_link'];
+            $page_path = './client/' . $tool_link;
+            if (file_exists($page_path)) {
+                include($page_path);
+            } else {
+                include('./client/home.php');
+            }
+        }
+        
+        else {
             include('./client/home.php'); // Changed from './client/home.php#dropdown'
         }
 

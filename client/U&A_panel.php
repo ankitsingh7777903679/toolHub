@@ -45,7 +45,7 @@ if (isset($_SESSION['user']['email']) && $_SESSION['user']['email'] == "ankitsin
         <ul class="dropdown-menu end-0">
 
             <li class="border-bottom my-2 pb-1">
-                <a class="dropdown-item d-flex align-items-center justify-content-center gap-3 px-0">
+                <a class="dropdown-item d-flex align-items-center justify-content-center gap-3 p-2">
                     <button class="btn btn-secondary user-avtar-inner rounded-circle fs-6 fw-bolder">
                         <i class="fa-regular fa-user"></i>
                     </button>
@@ -58,8 +58,8 @@ if (isset($_SESSION['user']['email']) && $_SESSION['user']['email'] == "ankitsin
 
                 </a>
             </li>
-            <li><a class="dropdown-item px-1 mt-1 py-0 text-start text-danger" href="./server/request.php?logout=true">
-                    <i class="fa-solid fa-arrow-right-from-bracket me-2"></i>Log out</a>
+            <li><a class="dropdown-item px-1 mt-1 py-0 text-start text-danger bg-white p-2" href="./server/request.php?logout=true">
+                    <i class="fa-solid fa-arrow-right-from-bracket me-2 "></i>Log out</a>
             </li>
 
         </ul>
